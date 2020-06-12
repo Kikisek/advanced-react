@@ -112,7 +112,7 @@ const Mutations = {
   },
   async resetPassword(parent, args, ctx, info) {
     // Check if the passowrds match
-    if (args.password !== aargs.confirmPassword) {
+    if (args.password !== args.confirmPassword) {
       throw new Error("Your passwords don't match!");
     }
     // Check if it's a legit reset token

@@ -19,7 +19,7 @@ class Signin extends Component {
   state = {
     name: "",
     email: "",
-    passoword: ""
+    password: ""
   };
   saveToState = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -54,7 +54,7 @@ class Signin extends Component {
                     onChange={this.saveToState}
                   />
                 </label>
-                <label htmlFor="passowrd">
+                <label htmlFor="password">
                   Password
                   <input
                     type="password"
