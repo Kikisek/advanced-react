@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
-import { ALL_ITEMS_QUERY } from './Items';
+import { ALL_ITEMS_QUERY } from "./Items";
 
 const DELETE_ITEM_MUTATION = gql`
   mutation DELETE_ITEM_MUTATION($id: ID!) {
@@ -17,10 +17,12 @@ class DeleteItem extends Component {
     // read the cache for the items we want
     const data = cache.readQuery({ query: ALL_ITEMS_QUERY });
     // filter the deleted item out of the page
-    data.items = data.items.filter(item => item.id !== payload.data.deleteItem.id);
+    data.items = data.items.filter(
+      (item) => item.id !== payload.data.deleteItem.id
+    );
     // put the items back
     cache.writeQuery({ query: ALL_ITEMS_QUERY, data });
-  }
+  };
   render() {
     return (
       <Mutation
@@ -32,7 +34,9 @@ class DeleteItem extends Component {
           <button
             onClick={() => {
               if (confirm("Are you sure you want to delete this?")) {
-                deleteItem();
+                deleteItem().catch((err) => {
+                  alert(err.message);
+                });
               }
             }}
           >
