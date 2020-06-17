@@ -1,5 +1,5 @@
 # source: https://us1.prisma.sh/k-cf6a9c/sick-fits/dev
-# timestamp: Sat Jun 13 2020 17:53:39 GMT-0400 (Eastern Daylight Time)
+# timestamp: Wed Jun 17 2020 09:11:29 GMT-0400 (Eastern Daylight Time)
 
 type AggregateItem {
   count: Int!
@@ -424,6 +424,7 @@ enum Permission {
   USER
   ITEMCREATE
   ITEMUPDATE
+  ITEMDELETE
   PERMISSIONUPDATE
 }
 
