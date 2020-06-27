@@ -3,12 +3,12 @@ import Error from "./ErrorMessage";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import styled from "styled-components";
-import Head from 'next/head';
+import Head from "next/head";
 
 const SingleItemStyles = styled.div`
   max-width: 1200px;
   margin: 20px auto;
-  box-shadow: ${props => props.theme.bs};
+  box-shadow: ${(props) => props.theme.bs};
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
@@ -62,3 +62,4 @@ class SingleItem extends Component {
 }
 
 export default SingleItem;
+export { SINGLE_ITEM_QUERY };
