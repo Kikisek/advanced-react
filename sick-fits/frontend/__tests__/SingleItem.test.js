@@ -1,10 +1,9 @@
 import { mount } from "enzyme";
 import toJSON from "enzyme-to-json";
-import waait from "waait";
+import wait from "waait";
 import SingleItem, { SINGLE_ITEM_QUERY } from "../components/SingleItem";
 import { MockedProvider } from "react-apollo/test-utils";
 import { fakeItem } from "../lib/testUtils";
-import wait from "waait";
 
 describe("<SingleItem/>", () => {
   it("renders with proper data", async () => {
