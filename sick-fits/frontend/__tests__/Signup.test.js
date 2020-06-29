@@ -1,10 +1,9 @@
 import { mount } from "enzyme";
 import toJSON from "enzyme-to-json";
 import wait from "waait";
-import Router from "next/router";
 import { MockedProvider } from "react-apollo/test-utils";
 import Signup, { SIGNUP_MUTATION } from "../components/Signup";
-import { CURRRENT_USER_QUERY, CURRENT_USER_QUERY } from "../components/User";
+import { CURRENT_USER_QUERY } from "../components/User";
 import { fakeUser } from "../lib/testUtils";
 import { ApolloConsumer } from "react-apollo";
 
